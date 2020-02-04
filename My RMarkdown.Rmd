@@ -1,0 +1,52 @@
+---
+title: "My RMarkdown File"
+subtitle: "DATA 598 Week-4 Class Excercise"
+author: "Chavi Gupta"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: example.bib
+link-citations: no
+---
+
+```{r setup, include=FALSE}
+library(tufte)
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+```
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+data <- data(starwars)
+knitr::read_chunk("my-external-code.R")
+```
+
+# Figure
+
+```{r plot-the-data, warning=FALSE, fig.cap="A ggplot of starwars stuff", fig.align='center', cache=TRUE, message=FALSE}
+```
+
+We can see a plot of starwars data in Figure \@ref(fig:plot-the-data)
+
+# Table
+
+```{r create-data-table, cache=TRUE}
+```
+
+We can see data about the Human species in Table \@ref(tab:create-data-table)
+
+Speaking about starwars, have you read this cool research paper [@echeverria2017discovery] on the Starwars Botnet?
+
+Here are a few papers on reproducibilty
+
+- @barba2018terminologies 
+- @plesser2018reproducibility
+
+# References
+
