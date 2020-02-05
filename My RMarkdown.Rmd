@@ -32,21 +32,14 @@ knitr::read_chunk("my-external-code.R")
 ```{r plot-the-data, warning=FALSE, fig.cap="A ggplot of starwars stuff", fig.align='center', cache=TRUE, message=FALSE}
 ```
 
-We can see a plot of starwars data in Figure \@ref(fig:plot-the-data)
-
 # Table
 
 ```{r create-data-table, cache=TRUE}
 ```
 
-We can see data about the Human species in Table \@ref(tab:create-data-table)
-
 Speaking about starwars, have you read this cool research paper [@echeverria2017discovery] on the Starwars Botnet?
 
-Here are a few papers on reproducibilty
-
-- @barba2018terminologies 
-- @plesser2018reproducibility
+[@barba2018terminologies]  and [@plesser2018reproducibility] are a few papers on reproducibilty. Do check them out!
 
 # References
 
